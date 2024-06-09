@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "richtext",
+      "required": true
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Renovation",
+        "Innovation"
+      ],
+      "required": true,
+      "default": "Renovation"
+    },
+    "Materials": {
+      "type": "text"
+    },
+    "Start_Date": {
+      "type": "date"
+    },
+    "End_Date": {
+      "type": "date"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Planned",
+        "In Progress",
+        "Completed"
+      ],
+      "default": "Planned"
+    },
+    "Budget": {
+      "type": "float"
+    },
+    "Client_Name": {
+      "type": "string"
+    },
+    "Location": {
+      "type": "string"
+    },
+    "Photos": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "Additional_Notes": {
+      "type": "blocks"
+    }
+  }
+}
